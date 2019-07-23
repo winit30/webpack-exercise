@@ -8,14 +8,14 @@ module.exports = ({ host, port } = {}) => {
       open: true,
       overlay: true,
     },
-    module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "eslint-loader"
-          }
-        ]
-    }
+    // module: {
+    //     rules: [
+    //       {
+    //         test: /\.js$/,
+    //         exclude: /node_modules/,
+    //         loader: "eslint-loader"
+    //       }
+    //     ]
+    // }
   }
 };

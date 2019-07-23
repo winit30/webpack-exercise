@@ -4,7 +4,7 @@
 
  module.exports = {
    output: {
-       filename: "bundle.js",
+       filename: "[name].chunk.js",
        path: path.resolve(__dirname, '../dist'),
    },
    plugins: [
@@ -13,5 +13,18 @@
          template: "./index.html"
      }),
      new CleanWebpackPlugin()
-   ]
+   ],
+   module: {
+        rules: [
+            {
+                test: /\.jpg$/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {limit: 10000}
+                    }
+                ]
+            }
+        ]
+    }
  };

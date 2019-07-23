@@ -1,5 +1,5 @@
-import {nav} from "./components/nav";
+const header = document.createElement("div");
 
-console.log(nav);
+header.innerText = "I am header";
 
-export const header = "I am a header";
+export {header};
